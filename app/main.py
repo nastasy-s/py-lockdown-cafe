@@ -1,10 +1,10 @@
 import datetime
-from .cafe import Cafe
-from .errors import VaccineError, NotWearingMaskError
-from .errors import NotVaccinatedError, OutdatedVaccineError
+from app.cafe import Cafe
+from app.errors import (VaccineError, NotWearingMaskError,
+                        NotVaccinatedError, OutdatedVaccineError)
 
 
-def go_to_cafe(friends: list, cafe: Cafe) -> str:
+def go_to_cafe(friends: list[dict], cafe: Cafe) -> str:
     masks_to_buy = 0
     vaccine_issues = False
 
